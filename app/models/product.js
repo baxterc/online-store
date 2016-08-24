@@ -5,5 +5,10 @@ export default DS.Model.extend({
   price: DS.attr(),
   description: DS.attr(),
   image: DS.attr(),
-  email: DS.attr()
+  email: DS.attr(),
+
+  shoppingCart: Ember.inject.service(),
+  // inCart: Ember.computed('shoppingCart.products.[]'), function(){
+  //   return this.get('shoppingCart').includes(this);
+  // }
 });
