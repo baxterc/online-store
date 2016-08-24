@@ -1,0 +1,8 @@
+<div class="col-md-2 product-tile">
+  <img class="product-image" src={{product.image}} alt={{product.name}} />
+  <h3>{{product.name}} {{product.price}}</h3>
+  <p>
+    {{product.description}}
+  </p>
+  <button class="btn btn-danger" {{action 'addToCart' product}}>Add to Cart</button>
+</div>

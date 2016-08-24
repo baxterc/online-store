@@ -1,8 +1,10 @@
 <div class="row feature-container">
   <div class="col-xs-3 col-xs-offset-2 feature-text">
     <h3>Great Prices</h3>
-    <p>Sell your stuff for top dollar!</p>
-    <button class="btn-lg btn-danger">How It Works</button>
+    <p>See all items available!</p>
+    {{#link-to 'browse'}}
+    <button class="btn-lg btn-danger">Explore Inventory</button>
+    {{/link-to}}
   </div>
 
   <div class="col-xs-3 col-xs-offset-2">

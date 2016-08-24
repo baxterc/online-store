@@ -19,6 +19,7 @@ export default Ember.Component.extend({
       this.set('product-description', "");
       this.set('product-image', "");
       this.set('product-email', "");
+      this.set('showItemForm', false);
       this.sendAction('productCreate', params);
     },
   }
