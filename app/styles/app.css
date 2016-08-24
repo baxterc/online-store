@@ -1,0 +1,75 @@
+#header-nav {
+  margin: 0;
+  border-radius: 0;
+  z-index: 10;
+  opacity: 0.5;
+  position: absolute;
+  width: 100%;
+}
+
+.nav-list {
+  padding-top: 10px;
+  padding-left: 8px;
+  font-size: 1.2em;
+  color: white;
+}
+
+.background-img {
+  width: 100%;
+  height: auto;
+  z-index: 9;
+}
+
+#sign-in {
+  padding-right: 27px;
+}
+
+#brand-img {
+  margin-top: -8px;
+}
+
+.enter-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -70px;
+  margin-left: -191px;
+  z-index: 11;
+  opacity: 0.8;
+  background: grey;
+  box-shadow: none;
+  outline: none;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.feature-text {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#product-name {
+  font-size: 1.375em;
+  font-weight: bold;
+  height: 2em;
+  line-height: 2.0625em;
+  background: none;
+  box-shadow: none;
+  outline: none;
+  opacity: 1
+}
+
+#glyph {
+  font-size: 1.5em;
+  padding-right: 10px;
+}
+
+#mid-banner {
+  width: 100%;
+  margin-top: -20px;
+}
+
+.feature-two {
+  background-color: #D3D3D3;
+}
