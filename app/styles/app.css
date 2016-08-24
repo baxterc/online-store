@@ -49,7 +49,7 @@
   padding-bottom: 40px;
 }
 
-#product-name {
+.product-info {
   font-size: 1.375em;
   font-weight: bold;
   height: 2em;
@@ -60,7 +60,7 @@
   opacity: 1
 }
 
-#glyph {
+.glyph {
   font-size: 1.5em;
   padding-right: 10px;
 }
@@ -72,4 +72,32 @@
 
 .feature-two {
   background-color: #D3D3D3;
+}
+
+.links {
+  margin-left: 30px;
+}
+
+.links-first {
+  margin-left: 110px;
+}
+
+.footer {
+  background-color: grey;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.footer a {
+  color: white;
+}
+
+.links-glyphs {
+  float: right;
+  margin-right: 50px;
+  margin-top: 30px;
+}
+
+#item-form {
+  text-align: center;
 }

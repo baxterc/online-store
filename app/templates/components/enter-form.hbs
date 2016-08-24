@@ -1,7 +1,18 @@
 <form class="enter-form form-inline">
-  <p style="font-size: 26pt">Crowd Sourced Products</p>
-  <p align="middle">Your stuff, your sales</p>
-  <span id="glyph" class="glyphicon glyphicon-send"></span>
-  {{input placeholder="What're you selling?" maxlength="24" value=product-name id="product-name"}}
-  <button class="btn btn-success btn-lg">Submit</button>
+  <p style="font-size: 26pt; color: white">Crowd Sourced Products</p>
+  <p align="middle" style="color: white">Your stuff, your sales</p>
+  <span class="glyphicon glyphicon-send glyph"></span>
+  {{input placeholder="What're you selling?" maxlength="24" value=product-name class="product-info"}}
+  {{#if showItemForm}}
+  <div id="item-form">
+    <br>
+    <p>{{input class="product-info" placeholder="Name your price" value=product-price}}</p>
+    <p>{{input class="product-info" placeholder="Brief description" value=product-description}}</p>
+    <p>{{input class="product-info" placeholder="Add an image" value=product-image}}</p>
+    <p>{{input class="product-info" placeholder="Email address" value=product-email}}</p>
+    <p><button {{action 'productCreate'}} class="btn btn-success btn-lg">Sell It!</button></p>
+  </div>
+  {{else}}
+  <button {{action 'showItemFormToggle'}}class="btn btn-success btn-lg">Get Started</button>
+  {{/if}}
 </form>
