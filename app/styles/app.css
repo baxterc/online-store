@@ -103,10 +103,8 @@
 }
 
 .browse {
-  margin-left: 20%;
-  margin-right: 20%;
   margin-bottom: 5%;
-  padding-top: 5%;
+  padding-top: 5%;*/
   text-align: center;
   background-color: #EDEDED;
   padding-bottom: 5%;
@@ -117,11 +115,18 @@
   padding-bottom: 20px;
   margin-left: 20px;
   margin-right: 20px;
+  text-align: center;
+  border: 2px solid silver;
+  width: 310px;
 }
 
 .product-image {
-  max-width: 90%;
-
+  max-width: 300px;
   padding-top: 20px;
   align: middle;
+}
+
+.product-update {
+  text-align: center;
+  display: block;
 }

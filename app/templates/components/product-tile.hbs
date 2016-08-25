@@ -1,12 +1,18 @@
-<div class="col-md-2 product-tile">
-  <img class="product-image" src={{product.image}} alt={{product.name}} />
-  <h3>{{product.name}} {{product.price}}</h3>
-  <p>
-    {{product.description}}
-  </p>
-  <button class="btn btn-danger" {{action 'addToCart' product}}>Add to Cart</button>
-  {{#if isAdmin}}
-  {{input value=product.name placeholder=product.name}}
-  <button {{action 'saveUpdate' product}}>Save</button>
-  {{/if}}
+<div class="product-tile">
+  <div class="product-content">
+    <img class="product-image" src={{product.image}} alt={{product.name}} />
+    <h3>{{product.name}} {{product.price}}</h3>
+    <p>
+      {{product.description}}
+    </p>
+    <button class="btn btn-danger" {{action 'addToCart' product}}>Add to Cart</button>
+    {{#if isAdmin}}
+    <div align="center" class="form-group">
+    {{input class="product-update" value=product.name placeholder=product.name}}
+    {{input class="product-update" value=product.price placeholder=product.price}}
+    {{textarea cols='30' class="product-update" value=product.description placeholder=product.description}}
+    <button {{action 'saveUpdate' product}}>Save</button>
+    </div>
+    {{/if}}
+  </div>
 </div>

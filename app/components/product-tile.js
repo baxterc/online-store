@@ -9,7 +9,10 @@ export default Ember.Component.extend({
       console.log(this.get('shoppingCart').total());
     },
     saveUpdate(product) {
-      product.save()
+      product.save();
+      this.get('shoppingCart').delete(product);
+      this.get('shoppingCart').add(product);
+      this.set('isAdmin', false);
     }
   }
 });

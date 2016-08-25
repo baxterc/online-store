@@ -5,6 +5,9 @@ export default Ember.Service.extend({
   add(product) {
     this.get('products').pushObject(product);
   },
+  delete(product) {
+    this.get('products').removeObject(product);
+  },
   total() {
     var runningTotal = 0;
     this.products.forEach(function(product) {
