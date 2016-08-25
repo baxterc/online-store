@@ -6,6 +6,7 @@ export default DS.Model.extend({
   description: DS.attr(),
   image: DS.attr(),
   email: DS.attr(),
+  feedbacks: DS.hasMany('feedback', { async: true }),
 
   shoppingCart: Ember.inject.service(),
   // inCart: Ember.computed('shoppingCart.products.[]'), function(){

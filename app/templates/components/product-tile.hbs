@@ -6,6 +6,7 @@
       {{product.description}}
     </p>
     <button class="btn btn-danger" {{action 'addToCart' product}}>Add to Cart</button>
+
     {{#if isAdmin}}
     <div align="center" class="form-group">
     {{input class="product-update" value=product.name placeholder=product.name}}
@@ -14,5 +15,47 @@
     <button {{action 'saveUpdate' product}}>Save</button>
     </div>
     {{/if}}
+
+    <button {{action 'leaveFeedback'}}>Leave Feedback</button>
+
+    {{#if giveFeedback}}
+      <div align="center" class="form-group">
+      <label for="content">Provide your feedback</label>
+      {{textarea class="feedback-create" value=content id="content"}}
+      {{#radio-button
+        value=5
+        groupValue=score
+        changed="scoreToggled"}}
+        Great
+      {{/radio-button}}
+      {{#radio-button
+        value=4
+        groupValue=score
+        changed="scoreToggled"}}
+        Good
+      {{/radio-button}}
+      {{#radio-button
+        value=3
+        groupValue=score
+        changed="scoreToggled"}}
+        Okay
+      {{/radio-button}}
+      {{#radio-button
+        value=2
+        groupValue=score
+        changed="scoreToggled"}}
+        Mediocre
+      {{/radio-button}}
+      {{#radio-button
+        value=1
+        groupValue=score
+        changed="scoreToggled"}}
+        Terrible
+      {{/radio-button}}
+      <label for="author">Please enter your name</label>
+      {{input class="feedback-create" value=author id="author"}}
+      <button {{action 'saveUpdate' product}}>Save</button>
+    {{/if}}
+
   </div>
 </div>
