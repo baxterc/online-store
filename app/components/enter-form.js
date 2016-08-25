@@ -9,7 +9,7 @@ export default Ember.Component.extend({
     productCreate() {
       var params = {
         name: this.get('product-name'),
-        price: this.get('product-price'),
+        price: parseInt(this.get('product-price')),
         description: this.get('product-description'),
         image: this.get('product-image'),
         email: this.get('product-email')

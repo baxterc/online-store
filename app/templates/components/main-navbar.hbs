@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
       </button>
       {{#link-to 'index'}}
-      <a class="navbar-brand" href="#"><img id="brand-img" alt="Brand" src="//www.tailorbrands.com/wp-content/uploads/2016/07/logo_banner-1.png"></a>
+      <a class="navbar-brand"><img id="brand-img" alt="Brand" src="//www.tailorbrands.com/wp-content/uploads/2016/07/logo_banner-1.png"></a>
       {{/link-to}}
     </div>
 
@@ -19,9 +19,11 @@
         <li><a href="#">Link</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li> <a href=><span class="glyphicon glyphicon-shopping-cart" ></span>{{cart-display}}</a></li>
+        <li> <a><span type="button" data-toggle="modal" data-target="#myModal" class="glyphicon glyphicon-shopping-cart">{{cart-total}}</span></a></li>
         <li><a href="#">Sign In</a></li>
+
       </ul>
     </div>
   </div>
 </nav>
+{{products-modal}}

@@ -5,4 +5,8 @@
     {{product.description}}
   </p>
   <button class="btn btn-danger" {{action 'addToCart' product}}>Add to Cart</button>
+  {{#if isAdmin}}
+  {{input value=product.name placeholder=product.name}}
+  <button {{action 'saveUpdate' product}}>Save</button>
+  {{/if}}
 </div>

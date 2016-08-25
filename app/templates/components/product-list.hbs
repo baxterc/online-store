@@ -1,0 +1,15 @@
+<br><br><br><br><br><br>
+<div class="row browse">
+  <h1>Items for Sale</h1>
+  <button {{action 'setAdmin'}}>Set to Admin Mode</button>
+  {{cart-display}}
+  <div class="col-md-1">
+
+  </div>
+  {{#each model as |product|}}
+  {{product-tile product=product isAdmin=isAdmin}}
+  {{/each}}
+  <div class="col-md-1">
+
+  </div>
+</div>

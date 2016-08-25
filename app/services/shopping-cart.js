@@ -5,12 +5,11 @@ export default Ember.Service.extend({
   add(product) {
     this.get('products').pushObject(product);
   },
-
-  total(){
+  total() {
     var runningTotal = 0;
-    this.products.forEach(function (product){
-      runningTotal += product.price;
-    });
+    this.products.forEach(function(product) {
+      runningTotal += parseInt(product.get('price'));
+    })
     return runningTotal;
   }
 });

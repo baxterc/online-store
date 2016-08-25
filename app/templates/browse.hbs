@@ -1,14 +1,1 @@
-<div class="row browse">
-  <h1>Items for Sale</h1>
-  {{cart-display}}
-  <div class="col-md-1">
-
-  </div>
-  {{#each model as |product|}}
-  {{product-tile product=product}}
-  {{/each}}
-  <div class="col-md-1">
-
-  </div>
-</div>
-<button {{action 'showTotal'}}></button>
+{{product-list model=model}}
