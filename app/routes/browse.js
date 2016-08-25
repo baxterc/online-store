@@ -5,9 +5,15 @@ export default Ember.Route.extend({
   model() {
     return this.store.findAll('product');
   },
+
   actions: {
-    // showTotal() {
-    //   return this.get('shoppingCart').total();
-    // }
+    createFeedback(params) {
+      var newFeedback = this.store.createRecord('feedback', params);
+      var product = params.product;
+      product.get('feedbacks').addObject(newFeedback);
+      newFeedback.save().then(function() {
+        return product.save();
+      })
+    }
   }
 });

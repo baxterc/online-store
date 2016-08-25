@@ -6,7 +6,7 @@
 <div class="container">
   <div class="browse" align="center">
       {{#each model as |product|}}
-      {{product-tile product=product isAdmin=isAdmin}}
+      {{product-tile product=product isAdmin=isAdmin createFeedback='createFeedback'}}
       {{/each}}
   </div>
 </div>

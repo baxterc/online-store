@@ -5,6 +5,9 @@ export default Ember.Component.extend({
   actions: {
     setAdmin() {
       this.toggleProperty('isAdmin')
-    }
+    },
+    createFeedback(params) {
+      this.sendAction('createFeedback', params);
+    },
   }
 });

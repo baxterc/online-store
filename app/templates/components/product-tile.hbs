@@ -1,9 +1,9 @@
 <div class="product-tile">
   <div class="product-content">
     <img class="product-image" src={{product.image}} alt={{product.name}} />
-    <h3>{{product.name}} {{product.price}}</h3>
+    <h3>{{price-indicator product}}{{product.name}} {{product.price}}</h3>
     <p>
-      {{product.description}}
+      {{product.description}} {{#if averageScore}}Score: {{averageScore}}{{/if}}
     </p>
     <button class="btn btn-danger" {{action 'addToCart' product}}>Add to Cart</button>
 
@@ -54,7 +54,8 @@
       {{/radio-button}}
       <label for="author">Please enter your name</label>
       {{input class="feedback-create" value=author id="author"}}
-      <button {{action 'saveUpdate' product}}>Save</button>
+      <button {{action 'createFeedback'}}>Save</button>
+      </div>
     {{/if}}
 
   </div>
