@@ -3,7 +3,7 @@
 <div class="container">
   <h2>Products</h2>
   <ul>
-    {{#each model.products as |product|}}
+    {{#each model as |product|}}
     <li><h4>{{product.name}} -- {{price-indicator product}}</h4>
       {{#if product.feedbacks}}
         <h5>Feedback: </h5>
