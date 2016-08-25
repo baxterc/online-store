@@ -1,12 +1,15 @@
 <div class="product-tile">
   <div class="product-content">
     <img class="product-image" src={{product.image}} alt={{product.name}} />
-    <h3>{{price-indicator product}}{{product.name}} {{product.price}}</h3>
+    <h3>{{price-indicator product}} {{product.name}} {{product.price}}</h3>
     <p>
       {{product.description}} {{#if averageScore}}Score: {{averageScore}}{{/if}}
     </p>
-    <button class="btn btn-danger" {{action 'addToCart' product}}>Add to Cart</button>
-
+    {{#if product.inCart}}
+        <button class="btn btn-danger" {{action 'removeFromCart' product}}>Remove from Cart</button>
+    {{else}}
+        <button class="btn btn-danger" {{action 'addToCart' product}}>Add to Cart</button>
+    {{/if}}
     {{#if isAdmin}}
     <div align="center" class="form-group">
     {{input class="product-update" value=product.name placeholder=product.name}}

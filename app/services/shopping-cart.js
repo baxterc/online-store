@@ -14,5 +14,8 @@ export default Ember.Service.extend({
       runningTotal += parseInt(product.get('price'));
     })
     return runningTotal;
-  }
+  },
+  includes(product) {
+    return this.get('products').includes(product);
+  },
 });

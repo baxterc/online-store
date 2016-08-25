@@ -10,7 +10,6 @@ export default Ember.Component.extend({
     this.get('product').get('feedbacks').forEach(function(feedback){
       runningScore += parseInt(feedback.get('score'));
     })
-    console.log(runningScore)
     return runningScore / this.get('product').get('feedbacks').get('length');
   }),
   productScore: Ember.computed('product.feedbacks.[]', function() {
@@ -19,6 +18,9 @@ export default Ember.Component.extend({
   actions: {
     addToCart(item) {
       this.get('shoppingCart').add(item);
+    },
+    removeFromCart(item){
+      this.get('shoppingCart').delete(item);
     },
     saveUpdate(product) {
       product.save();
@@ -40,6 +42,7 @@ export default Ember.Component.extend({
         product: this.get('product'),
       };
       this.sendAction('createFeedback', params);
-    }
+    },
+
   }
 });

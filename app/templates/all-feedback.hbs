@@ -4,18 +4,20 @@
   <h2>Products</h2>
   <ul>
     {{#each model.products as |product|}}
-    <li><h4>{{product.name}} -- {{product.price}}</h4>
-      <ul>
-        {{#each product.feedbacks as |feedback|}}
-          <li>
-            <h5>Feedback</h5>
-            {{feedback.content}} -- {{feedback.author}}
-            <p>
-              Score: {{feedback.score}}
-            </p>
-          </li>
-        {{/each}}
-      </ul>
+    <li><h4>{{product.name}} -- {{price-indicator product}}</h4>
+      {{#if product.feedbacks}}
+        <h5>Feedback: </h5>
+          <ul>
+            {{#each product.feedbacks as |feedback|}}
+              <li>
+                {{feedback.content}} -- {{feedback.author}}
+                <p>
+                  Score: {{feedback.score}}
+                </p>
+              </li>
+            {{/each}}
+          </ul>
+        {{/if}}
     </li>
     {{/each}}
   </ul>
